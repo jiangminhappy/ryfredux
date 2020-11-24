@@ -21,6 +21,12 @@ export const proData = (state = defaultState, action) => {
       imuDataList = imuDataList.set(action.index, imuItem);
     // 返回新的state
       return { ...state, ...{dataList: imuDataList.toJS()}}
+      case pro.TOGGLESELECT:
+        imuDataList = Immutable.List(state.dataList);
+        imuItem = Immutable.Map(state.dataList[action.index]);
+        imuItem = imuItem.set('selectStatus', !imuItem.get('selectStatus'));
+        imuDataList = imuDataList.set(action.index, imuItem);
+        return { ...state, ...{dataList: imuDataList.toJS()}}
     default:
       return state;
   }

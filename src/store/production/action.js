@@ -29,3 +29,11 @@ export const editPro = (index, selecNum) => {
     selecNum
   }
 }
+
+// 选择的选择
+export const togSelectPro = index => {
+  return {
+    type: pro.TOGGLESELECT,
+    index
+  }
+}

@@ -10,3 +10,10 @@ export const savaFormData = (value, datatype) => {
     datatype
   }
 }
+
+export const saveImg = path => {
+  return {
+    type: home.SAVEIMG,
+    path
+  }
+}
