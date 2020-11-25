@@ -27,7 +27,7 @@ class Production extends Component {
 
   render() {
     return (
-      <main className="common-con-top">
+      <main className="">
       <NavLink to="/" exact className="header-link header-link-confim">确定</NavLink>
         <section className="pro-list-con">
           <ul className="pro-list-ul">
